@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyNotes - Unlock Your Academic Potential</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="home.html" class="logo">MyNotes</a>
+            
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <div class="profile-dropdown">
+                <button class="profile-btn">Aayush
+                    <i class="fas fa-user-circle"> </i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="profile.php">Profile</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Unlock Your <span class="text-highlight">Academic Potential</span> with EduLibraries</h1>
+            <p class="hero-description">Access semester-wise notes, syllabi, and previous year question papers all in one place. Our platform provides a structured and user-friendly interface, empowering students to achieve academic excellence.</p>
+            
+            <div class="hero-buttons">
+                <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span class="text-highlight">EduLibraries</span></h2>
+            <p class="section-subtitle">We're dedicated to providing high-quality academic resources to students worldwide, helping them succeed in their educational journey.</p>
+            
+            <div class="about-content">
+                <p>EduLibraries was founded with the mission to democratize access to educational resources. Our platform aggregates materials from top institutions and educators, organizing them in a way that makes learning more efficient and effective.</p>
+                <p>With over 10,000 resources across various disciplines, we serve students from undergraduate to postgraduate levels. Our team of educators and technologists work continuously to improve the platform and expand our collection.</p>
+                <a href="about.html" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section courses">
+        <div class="container">
+            <h2 class="section-title">Our <span class="text-highlight">Courses</span></h2>
+            <p class="section-subtitle">Browse our comprehensive collection of academic resources organized by course and semester.</p>
+            
+            <div class="course-cards">
+                <!-- Course Card 1 - Computer Science -->
+                <div class="course-card" onclick="openCourseModal('computer-science')">
+                    <div class="course-img">
+                        <i class="fas fa-laptop-code" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">School of Computing</h3>
+                        <p class="course-description">Master programming, algorithms, and system design with our comprehensive computer science resources.</p>
+                        <div class="btn btn-secondary">View Details</div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 2 - Business -->
+                <div class="course-card" onclick="openCourseModal('business')">
+                    <div class="course-img">
+                        <i class="fas fa-business-time" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Business and Management</h3>
+                        <p class="course-description">Learn business strategies, management principles, and economic theories from top institutions.</p>
+                        <div class="btn btn-secondary">View Details</div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 3 - Engineering -->
+                <div class="course-card" onclick="openCourseModal('engineering')">
+                    <div class="course-img">
+                        <i class="fas fa-robot" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Computer Science Engineering</h3>
+                        <p class="course-description">From fundamentals to advanced topics, our engineering resources cover all aspects of the discipline.</p>
+                        <div class="btn btn-secondary">View Details</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="courses.html" class="btn btn-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <h2 class="section-title">How EduLibraries <span class="text-highlight">Works</span></h2>
+            <p class="section-subtitle">Getting started is simple. Follow these steps to access the resources you need.</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Register for free to get full access to all our resources and features.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find Resources</h3>
+                    <p>Browse by course, semester, or use our powerful search functionality.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Download Materials</h3>
+                    <p>Access notes, syllabi, and past papers with a single click.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Ace Your Exams</h3>
+                    <p>Study smarter with our organized resources and succeed academically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Students <span class="text-highlight">Say</span></h2>
+            <p class="section-subtitle">Hear from students who have used EduLibraries to enhance their learning experience.</p>
+            
+            <div class="testimonial-cards">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"EduLibraries helped me find all the resources I needed for my semester in one place. The organized notes and past papers were invaluable for my exams."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Computer Science Student</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a business student, having access to well-structured course materials from different universities gave me a broader perspective on my subjects."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Business Administration</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The semester-wise organization made it so easy to find exactly what I needed. Saved me countless hours of searching across different sources."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PP</div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Engineering Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">EduLibraries</a>
+                    <p>Empowering students worldwide with accessible, high-quality academic resources.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/EduLibraries" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/EduLibraries" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/edulibraries" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/edulibraries" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="resources.html">Lecture Notes</a></li>
+                        <li><a href="resources.html">Syllabi</a></li>
+                        <li><a href="resources.html">Past Papers</a></li>
+                        <li><a href="resources.html">Study Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Education Street, Academic City, AC 12345</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+11234567890">+1 (123) 456-7890</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@edulibraries.com">contact@edulibraries.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduLibraries. All rights reserved.</p>
+                <nav>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    
+</body>
+</html>

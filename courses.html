@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - MyNotes</title>
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <script src="courses.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="home.html" class="logo">MyNotes</a>
+            
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="courses.html" class="active">Courses</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <div class="profile-dropdown">
+                <button class="profile-btn">Aayush
+                    <i class="fas fa-user-circle"> </i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Courses Page Content -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title">All <span class="text-highlight">Courses</span></h2>
+            <p class="section-subtitle">Browse our complete collection of academic programs and resources.</p>
+            
+            <div style="margin-bottom: 30px;">
+                <select id="categoryDropdown" class="btn btn-secondary" style="padding: 10px 20px; min-width: 200px;">
+                    <option value="all">All Categories</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="business">Business</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="science">Science</option>
+                    <option value="arts">Arts</option>
+                </select>
+            </div>
+            
+            
+            <div class="course-cards">
+                <!-- Initial Courses (first batch) -->
+                <!-- Computer Science -->
+                <div class="course-card visible" data-categories="computer-science">
+                    <div class="course-img" style="background-color: #e3f2fd;">
+                        <i class="fas fa-laptop-code" style="font-size: 3rem; color: #1976d2;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">School of Computing</h3>
+                        <p class="course-description">Master programming, algorithms, and system design with our comprehensive computer science resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">120 Resources</span>
+                            <a href="SOC.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business -->
+                <div class="course-card visible" data-categories="business">
+                    <div class="course-img" style="background-color: #e8f5e9;">
+                        <i class="fas fa-business-time" style="font-size: 3rem; color: #388e3c;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Business and Management</h3>
+                        <p class="course-description">Learn business strategies, management principles, and economic theories from top institutions.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">85 Resources</span>
+                            <a href="BAM.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Engineering -->
+                <div class="course-card visible" data-categories="engineering">
+                    <div class="course-img" style="background-color: #f3e5f5;">
+                        <i class="fas fa-robot" style="font-size: 3rem; color: #8e24aa;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Computer Science Engineering</h3>
+                        <p class="course-description">From fundamentals to advanced topics, our engineering resources cover all aspects of the discipline.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">150 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Courses (hidden initially) -->
+                <!-- Data Science -->
+                <div class="course-card" data-categories="computer-science science">
+                    <div class="course-img" style="background-color: #e0f7fa;">
+                        <i class="fas fa-database" style="font-size: 3rem; color: #00acc1;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Science</h3>
+                        <p class="course-description">Learn data analysis, machine learning, and statistical modeling with our comprehensive resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">75 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medicine -->
+                <div class="course-card" data-categories="science">
+                    <div class="course-img" style="background-color: #ffebee;">
+                        <i class="fas fa-heartbeat" style="font-size: 3rem; color: #e53935;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Medical Sciences</h3>
+                        <p class="course-description">Comprehensive resources for medical students covering anatomy, physiology, and clinical practice.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">90 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Law -->
+                <div class="course-card" data-categories="arts">
+                    <div class="course-img" style="background-color: #fff8e1;">
+                        <i class="fas fa-gavel" style="font-size: 3rem; color: #ff8f00;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Law and Legal Studies</h3>
+                        <p class="course-description">Resources covering constitutional law, criminal law, contracts, and other legal disciplines.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">60 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mathematics -->
+                <div class="course-card" data-categories="science">
+                    <div class="course-img" style="background-color: #f1f8e9;">
+                        <i class="fas fa-square-root-alt" style="font-size: 3rem; color: #689f38;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Mathematics</h3>
+                        <p class="course-description">Explore algebra, calculus, statistics, and other mathematical disciplines with our resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">65 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Psychology -->
+                <div class="course-card" data-categories="science arts">
+                    <div class="course-img" style="background-color: #fce4ec;">
+                        <i class="fas fa-brain" style="font-size: 3rem; color: #d81b60;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Psychology</h3>
+                        <p class="course-description">Study human behavior, cognition, and mental processes with our psychology resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">55 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Architecture -->
+                <div class="course-card" data-categories="arts engineering">
+                    <div class="course-img" style="background-color: #e8eaf6;">
+                        <i class="fas fa-archway" style="font-size: 3rem; color: #3949ab;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Architecture</h3>
+                        <p class="course-description">Learn about architectural design, history, and theory with our comprehensive resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">40 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Environmental Science -->
+                <div class="course-card" data-categories="science">
+                    <div class="course-img" style="background-color: #e8f5e9;">
+                        <i class="fas fa-leaf" style="font-size: 3rem; color: #43a047;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Environmental Science</h3>
+                        <p class="course-description">Explore ecology, conservation, and sustainability with our environmental science resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">50 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Economics -->
+                <div class="course-card" data-categories="business science">
+                    <div class="course-img" style="background-color: #fff3e0;">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: #fb8c00;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Economics</h3>
+                        <p class="course-description">Study microeconomics, macroeconomics, and econometrics with our comprehensive resources.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">70 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- History -->
+                <div class="course-card" data-categories="arts">
+                    <div class="course-img" style="background-color: #efebe9;">
+                        <i class="fas fa-landmark" style="font-size: 3rem; color: #6d4c41;"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">History</h3>
+                        <p class="course-description">Explore world history, ancient civilizations, and modern historical developments.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span style="color: var(--primary-color); font-weight: 500;">45 Resources</span>
+                            <div class="btn btn-secondary">View Details</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <button id="loadMoreBtn" class="btn btn-secondary">Load More Courses</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Course Details Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="courseModalContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Computing - Computer Science</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="SOC.css">
+</head>
+<body>
+    <header>
+        <i class="fas fa-laptop-code icon"></i>
+        <h1>School of Computing</h1>
+        <p>Computer Science Program</p>
+    </header>
+
+    <div class="container">
+        <p>Our Computer Science program offers comprehensive resources covering programming fundamentals, algorithms, data structures, artificial intelligence, and more. Designed to support students at all levels, from beginners to advanced learners.</p>
+
+        <h2>Course Details</h2>
+        <p><strong>Program Overview:</strong> This course provides comprehensive training in school of computing with a focus on both theoretical foundations and practical applications.</p>
+        <p><strong>Learning Outcomes:</strong> Upon completion, students will have mastered the core concepts and developed practical skills applicable in real-world scenarios.</p>
+        <p><strong>Assessment Methods:</strong>Combination of exams, projects, and continuous assessments.</p>
+        <p><strong>Career Opportunities:</strong>  Graduates can pursue careers in various fields including software development, data analysis, system architecture, and more.</p>
+
+        <div class="semester-nav">
+            <button onclick="showSemester(1)">Semester 1</button>
+            <button onclick="showSemester(2)">Semester 2</button>
+            <button onclick="showSemester(3)">Semester 3</button>
+            <button onclick="showSemester(4)">Semester 4</button>
+            <button onclick="showSemester(5)">Semester 5</button>
+            <button onclick="showSemester(6)">Semester 6</button>
+        </div>
+
+        <div id="semester1" class="semester active">
+            <h3>Semester 1</h3>
+            <ul>
+                <li>Introduction to Programming - Notes (PDF) <button>Download</button></li>
+                <li>Discrete Mathematics - Notes (PDF) <button>Download</button></li>
+                <li>Computer Fundamentals - Notes (PDF) <button>Download</button></li>
+                <li>Digital Logic Design - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester2" class="semester">
+            <h3>Semester 2</h3>
+            <ul>
+                <li>Data Structures - Notes (PDF) <button>Download</button></li>
+                <li>Object-Oriented Programming - Notes (PDF) <button>Download</button></li>
+                <li>Computer Architecture - Notes (PDF) <button>Download</button></li>
+                <li>Database Systems - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester3" class="semester">
+            <h3>Semester 3</h3>
+            <ul>
+                <li>Algorithms - Notes (PDF) <button>Download</button></li>
+                <li>Operating Systems - Notes (PDF) <button>Download</button></li>
+                <li>Computer Networks - Notes (PDF) <button>Download</button></li>
+                <li>Software Engineering - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester4" class="semester">
+            <h3>Semester 4</h3>
+            <ul>
+                <li>Artificial Intelligence - Notes (PDF) <button>Download</button></li>
+                <li>Machine Learning - Notes (PDF) <button>Download</button></li>
+                <li>Cloud Computing - Notes (PDF) <button>Download</button></li>
+                <li>Cybersecurity - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester5" class="semester">
+            <h3>Semester 5</h3>
+            <ul>
+                <li>Data Science - Notes (PDF) <button>Download</button></li>
+                <li>Big Data Analytics - Notes (PDF) <button>Download</button></li>
+                <li>Blockchain Technology - Notes (PDF) <button>Download</button></li>
+                <li>Internet of Things - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester6" class="semester">
+            <h3>Semester 6</h3>
+            <ul>
+                <li>Advanced Algorithms - Notes (PDF) <button>Download</button></li>
+                <li>Distributed Systems - Notes (PDF) <button>Download</button></li>
+                <li>Natural Language Processing - Notes (PDF) <button>Download</button></li>
+                <li>Capstone Project Guidelines - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 MyNotes. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSemester(semesterNum) {
+            // Hide all semesters
+            document.querySelectorAll('.semester').forEach(sem => {
+                sem.classList.remove('active');
+            });
+            
+            // Show selected semester
+            document.getElementById(`semester${semesterNum}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

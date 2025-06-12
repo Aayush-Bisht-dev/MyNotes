@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Business - Business and Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="SOC.css">
+</head>
+<body>
+    <header>
+        <i class="fas fa-business-time icon"></i>
+        <h1>School of Business</h1>
+        <p>Business and Management Program</p>
+    </header>
+
+    <div class="container">
+        <p>The Business and Management program provides resources on economics, marketing, finance, organizational behavior, and strategic management. Ideal for students pursuing careers in business administration and entrepreneurship.</p>
+
+        <h2>Program Overview</h2>
+        <p><strong>Program Overview:</strong> This course provides comprehensive training in business and management with a focus on both theoretical foundations and practical applications.</p>
+        <p><strong> Learning Outcomes:</strong> Upon completion, students will have mastered the core concepts and developed practical skills applicable in real-world scenarios.</p>
+        <p><strong>Assessment Methods</strong> Combination of exams, projects, and continuous assessments.</p>
+        <p><strong> Career Opportunities:</strong> Graduates can pursue careers in various fields including software development, data analysis, system architecture, and more.</p>
+
+        <div class="semester-nav">
+            <button onclick="showSemester('semester1')">Semester 1</button>
+            <button onclick="showSemester('semester2')">Semester 2</button>
+            <button onclick="showSemester('semester3')">Semester 3</button>
+            <button onclick="showSemester('semester4')">Semester 4</button>
+            <button onclick="showSemester('semester5')">Semester 5</button>
+            <button onclick="showSemester('semester6')">Semester 6</button>
+        </div>
+
+        <div id="semester1" class="semester active">
+            <h3>Semester 1</h3>
+            <ul>
+                <li>Principles of Management - Notes (PDF) <button>Download</button></li>
+                <li>Microeconomics - Notes (PDF) <button>Download</button></li>
+                <li>Business Mathematics - Notes (PDF) <button>Download</button></li>
+                <li>Financial Accounting - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester2" class="semester">
+            <h3>Semester 2</h3>
+            <ul>
+                <li>Macroeconomics - Notes (PDF) <button>Download</button></li>
+                <li>Business Statistics - Notes (PDF) <button>Download</button></li>
+                <li>Marketing Principles - Notes (PDF) <button>Download</button></li>
+                <li>Organizational Behavior - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester3" class="semester">
+            <h3>Semester 3</h3>
+            <ul>
+                <li>Financial Management - Notes (PDF) <button>Download</button></li>
+                <li>Business Law - Notes (PDF) <button>Download</button></li>
+                <li>Operations Management - Notes (PDF) <button>Download</button></li>
+                <li>Consumer Behavior - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester4" class="semester">
+            <h3>Semester 4</h3>
+            <ul>
+                <li>Strategic Management - Notes (PDF) <button>Download</button></li>
+                <li>International Business - Notes (PDF) <button>Download</button></li>
+                <li>Entrepreneurship - Notes (PDF) <button>Download</button></li>
+                <li>Business Analytics - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester5" class="semester">
+            <h3>Semester 5</h3>
+            <ul>
+                <li>Digital Marketing - Notes (PDF) <button>Download</button></li>
+                <li>Corporate Finance - Notes (PDF) <button>Download</button></li>
+                <li>Supply Chain Management - Notes (PDF) <button>Download</button></li>
+                <li>Leadership Skills - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div id="semester6" class="semester">
+            <h3>Semester 6</h3>
+            <ul>
+                <li>Business Ethics - Notes (PDF) <button>Download</button></li>
+                <li>Project Management - Notes (PDF) <button>Download</button></li>
+                <li>International Marketing - Notes (PDF) <button>Download</button></li>
+                <li>Capstone Project Guidelines - Notes (PDF) <button>Download</button></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 School of Business. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSemester(semesterId) {
+            // Hide all semesters
+            document.querySelectorAll('.semester').forEach(sem => {
+                sem.classList.remove('active');
+            });
+            
+            // Show selected semester
+            document.getElementById(semesterId).classList.add('active');
+            
+            // Smooth scroll to the semester section
+            document.getElementById(semesterId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+</body>
+</html>
